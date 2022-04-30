@@ -1,6 +1,6 @@
 <?php
 spl_autoload_register(function ($class) {
-    include 'classes'.str_starts_with(strtoupper(PHP_OS),"WIN")? "\\":"/"."$class.php";
+    include "classes/$class.php";
 });
 
 
