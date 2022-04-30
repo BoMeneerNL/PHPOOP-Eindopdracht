@@ -1,5 +1,5 @@
 <?php
-include_once 'Classes/product.php';
+include_once 'Classes'.str_starts_with(strtoupper(PHP_OS),"WIN").'Product.php';
 class DVD extends Product
 {
     private int $lengteInMinuten;
