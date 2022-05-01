@@ -1,6 +1,6 @@
 <?php
 spl_autoload_register(function ($class) {
-    include "classes\\$class.php";
+    include "Classes\\$class.php";
 });
 $Product = new Product("Good product name",10,1,420.21,true);
 $CD = new CD("Good CD Name",10,1,420.21,true);
