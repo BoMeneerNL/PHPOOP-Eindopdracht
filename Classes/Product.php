@@ -20,7 +20,7 @@ class Product
     public function __toString(): string
     {
         $actief = $this->actief ? "Actief" : "Niet actief";
-        return "Product: $this->naam ,$this->aantalInVoorraad x in voorraad, prijs: $this->prijs €, actief: $actief";
+        return "Product naam: $this->naam, ".$this->aantalInVoorraad."x in voorraad, prijs: $this->prijs €, actief: $actief\r\n";
     }
 
     public function getNaam()
