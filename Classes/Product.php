@@ -23,7 +23,7 @@ class Product
         return "Product naam: $this->naam, ".$this->aantalInVoorraad."x in voorraad, prijs: $this->prijs €, actief: $actief\r\n";
     }
 
-    public function getNaam()
+    public function getNaam(): string
     {
         return $this->naam;
     }
@@ -31,15 +31,15 @@ class Product
     {
         $this->naam = $naam;
     }
-    public function getAantalInVoorraad()
+    public function getAantalInVoorraad() : int
     {
         return $this->aantalInVoorraad;
     }
-    public function setAantalInVoorraad($aantalInVoorraad)
+    public function setAantalInVoorraad($aantalInVoorraad): void
     {
         $this->aantalInVoorraad = $aantalInVoorraad;
     }
-    public function getMinimumVoorraad()
+    public function getMinimumVoorraad(): int
     {
         return $this->minimumVoorraad;
     }
@@ -47,7 +47,7 @@ class Product
     {
         $this->minimumVoorraad = $minimumVoorraad;
     }
-    public function getPrijs()
+    public function getPrijs(): float | int
     {
         return $this->prijs;
     }
@@ -55,7 +55,7 @@ class Product
     {
         $this->prijs = $prijs;
     }
-    public function getActief()
+    public function getActief() : bool
     {
         return $this->actief;
     }
