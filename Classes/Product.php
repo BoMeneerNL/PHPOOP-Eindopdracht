@@ -27,7 +27,7 @@ class Product
     {
         return $this->naam;
     }
-    public function setNaam($naam)
+    public function setNaam($naam): void
     {
         $this->naam = $naam;
     }

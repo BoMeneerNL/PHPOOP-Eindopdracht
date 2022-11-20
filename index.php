@@ -38,24 +38,29 @@ foreach ($data2 as $key => $value) {
     echo "Aantal songs: ".$value["aantalSongs"]."\r\n";
     echo "Label: ".$value["label"]."\r\n";
     echo "Naaam: ".$value["naam"]."\r\n";
-    echo "Aantal in voorraad: ".$value["aantalInVoorraad"]."\r\n";
-    echo "Minimum voorraad: ".$value["minimumVoorraad"]."\r\n";
-    echo "Prijs: ".$value["prijs"]."€\r\n";
-    echo "Actief: ".($value["actief"] == "true" ?"Ja":"Nee")."\r\n";
-    echo("----------\r\n");
+    extracted($value);
 }
 
 echo "===========data_3================\n";
+/**
+ * @param mixed $value
+ * @return void
+ */
+function extracted(mixed $value): void
+{
+    echo "Aantal in voorraad: " . $value["aantalInVoorraad"] . "\r\n";
+    echo "Minimum voorraad: " . $value["minimumVoorraad"] . "\r\n";
+    echo "Prijs: " . $value["prijs"] . "€\r\n";
+    echo "Actief: " . ($value["actief"] == "true" ? "Ja" : "Nee") . "\r\n";
+    echo("----------\r\n");
+}
+
 foreach ($data3 as $key => $value) {
     echo("----------\r\n");
     echo "Lengte: ".$value["lengteInMinuten"]." minuten\r\n";
     echo "Uit: ".$value["jaarUitgifte"]."\r\n";
     echo "Filmstudio: ".$value["filmStudio"]."\r\n";
     echo "Naam: ".$value["naam"]."\r\n";
-    echo "Aantal in voorraad: ".$value["aantalInVoorraad"]."\r\n";
-    echo "Minimum voorraad: ".$value["minimumVoorraad"]."\r\n";
-    echo "Prijs: ".$value["prijs"]."€\r\n";
-    echo "Actief: ".($value["actief"] == "true" ?"Ja":"Nee")."\r\n";
-    echo("----------\r\n");
+    extracted($value);
 }
 

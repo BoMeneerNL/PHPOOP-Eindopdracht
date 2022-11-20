@@ -2,7 +2,8 @@
 
 class CSV
 {
-    public static function read($file){
+    public static function read($file): array
+    {
         $dirsplit = explode("\\",__FILE__);
         $dirsplit = array_slice($dirsplit,0,count($dirsplit)-2);
         $dirpath = implode("\\",$dirsplit);
